@@ -31,6 +31,8 @@ cinst -y SublimeText3
 cinst -y SublimeText3.PackageControl
 cinst -y sublimetext3-contextmenu
 cinst -y SublimeText3.PowershellAlias
+cinst -y notepadplusplus
+cinst -y winmerge
 
 cinst -y Atom
 cinst -y visualstudiocode
