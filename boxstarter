@@ -4,6 +4,10 @@ Register-PackageSource -Name chocolatey -Location http://chocolatey.org/api/v2 -
 
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 
+# Invert vertical scrolling
+Get-ItemProperty HKLM:\SYSTEM\CurrentControlSet\Enum\HID\*\*\Device` Parameters FlipFlopWheel -EA 0 | ForEach-Object { Set-ItemProperty $_.PSPath FlipFlopWheel 1 }
+
+# Some basics
 cinst -y Microsoft-Hyper-V-All -source windowsFeatures
 cinst fiddler4
 cinst dotpeek
