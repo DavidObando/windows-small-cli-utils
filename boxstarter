@@ -11,10 +11,6 @@ cinst IIS-WebServerRole -source windowsfeatures
 
 # Packages
 cinst -y cmder -pre
-cinst -y Gow
-
-## Node, npm
-cinst -y nodejs.install
 
 ## Git
 cinst -y git.install
@@ -27,14 +23,9 @@ cinst -y nodejs.install
 npm install -g npm-windows-upgrade
 
 ## Editors
-cinst -y SublimeText3
-cinst -y SublimeText3.PackageControl
-cinst -y sublimetext3-contextmenu
-cinst -y SublimeText3.PowershellAlias
 cinst -y notepadplusplus
 cinst -y winmerge
 
-cinst -y Atom
 cinst -y visualstudiocode
 
 
@@ -60,7 +51,7 @@ if (Test-PendingReboot) { Invoke-Reboot }
 
 # Pinning Things
 Install-ChocolateyPinnedTaskBarItem "$env:programfiles\Google\Chrome\Application\chrome.exe"
-Install-ChocolateyFileAssociation ".txt" "$env:programfiles\Sublime Text 3\sublime_text.exe"
+# Install-ChocolateyFileAssociation ".txt" "$env:programfiles\Sublime Text 3\sublime_text.exe"
 
 # Let's get Updates, too
 Install-WindowsUpdate -acceptEula
