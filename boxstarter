@@ -19,8 +19,8 @@ cinst -y cmder -pre
 ## Git
 cinst -y git.install
 cinst -y poshgit
-cinst -y git-credential-winstore
 cinst -y github
+cinst -y Git-Credential-Manager-for-Windows
 
 ## Node, npm
 cinst -y nodejs.install
@@ -29,19 +29,18 @@ npm install -g npm-windows-upgrade
 ## Editors
 cinst -y notepadplusplus
 cinst -y winmerge
-
 cinst -y visualstudiocode
 
 
 ## Ruby, Go, Python
-cinst -y ruby
-cinst -y ruby.devkit
+#cinst -y ruby
+#cinst -y ruby.devkit
 
-cinst -y golang
+#cinst -y golang
 
-cinst -y python
-cinst -y pip
-cinst -y easy.install
+#cinst -y python
+#cinst -y pip
+#cinst -y easy.install
 
 if (Test-PendingReboot) { Invoke-Reboot }
 
