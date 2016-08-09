@@ -15,6 +15,7 @@ cinst IIS-WebServerRole -source windowsfeatures
 
 # Packages
 cinst -y cmder -pre
+cinst -y Gow
 
 ## Git
 cinst -y git.install
